@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Health</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-margin-bottom">
+            <div class="header-bar">
+
+                <h1 class="clinic-name fade-in"><a href="/">Dental Health</a></h1>
+
+                <nav class="nav-bar">
+
+                    <ul class="menu-list">
+                        <li><a href="#services" class="menu-list-item">Serviços</a></li>
+                        <li><a href="#aboutus" class="menu-list-item">Sobre</a></li>
+                        <li><a href="#testimonial" class="menu-list-item">Depoimentos</a></li>
+                    </ul>
+
+                </nav>
+
+                <a href="#contact" class="contact-btn">Entre em contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="main-cta">
+            <!--Preciso adicionar uma div main-cta-content para padronizar todas as seções do meu site-->
+            <div class="main-cta-content-left">
+                <header>
+                    <h2><span class="main-cta-text-blue">Sorrisos Perfeitos</span> começam com <span
+                            class="main-cta-text-green">Profissionais de Excelência</span></h2>
+                    <p>Na Dental Health, unimos tecnologia de ponta e cuidado personalizado para transformar o seu
+                        sorriso com segurança e resultados duradouros.</p>
+                </header>
+
+                <div class="btn-cta">
+                    <a href="#contact" class="contact-btn">Agende sua avaliação</a>
+
+                    <a href="#services" class="services-btn">Nossos serviços</a>
+                </div>
+            </div>
+
+            <div class="main-cta-content-right">
+                <img src="assets/images/dentista-img.svg" alt="Dentista Sorrindo" title="Dentista Sorrindo">
+            </div>
+        </article>
+
+        <article class="main-services" id="services">
+            <div class="main-services-content">
+                <header class="services-header">
+                    <h2>Nossos Serviços</h2>
+                    <p>Na Dental Health, oferecemos tratamentos completos - da prevenção à estética - com tecnologia e
+                        atenção personalizada para cada paciente.</p>
+                </header>
+
+                <div class="services-cards-grid">
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/sparkles.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Estética Dental</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Transforme seu sorriso com clareamento, facetas e lentes de
+                                contato
+                                dental. Resultados harmônicos
+                                garantidos.</p>
+                            <button class="btn-saiba-mais open-modal" data-modal="modal-1">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <dialog id="modal-1">
+                        <h1>TESTE 1</h1>
+                    </dialog>
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/tooth.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Implantes e Reabilitação Oral</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Recupere a função e estética do seu sorriso com implantes
+                                e
+                                próteses
+                                de alta durabilidade e aparência natural.</p>
+                            <button class="btn-saiba-mais" data-modal="modal-2">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <dialog id="modal-2">
+                        <h1>TESTE 2</h1>
+                    </dialog>
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/toothbrush.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Prevenção e Limpeza</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Mantenha sua saúde bucal em dia com check-ups, limpeza
+                                profissional
+                                e
+                                acompanhamento regular.</p>
+                            <button class="btn-saiba-mais" data-modal="modal-3">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <dialog id="modal-3">
+                        <h1>TESTE 2</h1>
+                    </dialog>
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/activity.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Endodontia (Canal)</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Tratamentos de canal sem dor, com tecnologia moderna e
+                                equipe
+                                especializada em conforto e precisão.</p>
+                            <button class="btn-saiba-mais">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/leaf.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Periodontia (Gengiva)</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Saúde gengival é essencial. Tratamos e prevenimos
+                                gengivite,
+                                sangramento e retrações gengivais.</p>
+                            <button class="btn-saiba-mais">Saiba mais</button>
+                        </div>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="services-card-content">
+                            <header class="services-cards-header">
+                                <img src="assets/icons/health.svg" title="sparkle-icon" alt="sparkle-icon">
+                                <h3 class="services-cards-header-title">Cirurgias Avançadas</h3>
+                            </header>
+
+                            <p class="services-cards-detail">Extrações, enxertos, laserterapia e outros procedimentos
+                                realizados
+                                com
+                                total segurança e cuidado.</p>
+                            <button class="btn-saiba-mais">Saiba mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="main-aboutus" id="aboutus">
+            <div class="main-aboutus-content">
+                <div class="main-aboutus-badge">
+                    <span class="badge-name">Sobre nós</span>
+                </div>
+
+                <div class="main-aboutus-divider">
+                    <div class="main-aboutus-content-left">
+                        <header>
+                            <h2>Cuidando de Sorrisos com <span class="title-gradient">Excelência e Dedicação</span></h2>
+                        </header>
+
+                        <p>Fundada em 2012, a Dental Health é uma clínica odontológica completa localizada no coração da
+                            cidade.
+                        </p>
+
+                        <p>Com uma equipe altamente qualificada e estrutura moderna, oferecemos tratamentos que unem
+                            tecnologia
+                            de ponta, conforto e resultados duradouros.</p>
+
+                        <p>Nosso compromisso é proporcionar uma experiência odontológica humanizada, onde o paciente se
+                            sente
+                            seguro do primeiro contato até o pós-tratamento.</p>
+                    </div>
+
+                    <div class="main-aboutus-content-right">
+                        <img src="assets/images/consultorio-img.svg" alt="Consultorio" title´="Consultorio">
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stats-grid">
+                            <div class="stats-card">
+                                <span class="stats-number">12+</span>
+                                <p class="stats-label">Anos de Experiência Odontológica</p>
+                            </div>
+
+                            <div class="stats-card">
+                                <span class="stats-number">4.000+</span>
+                                <p class="stats-label">Pacientes Atendidos</p>
+                            </div>
+
+                            <div class="stats-card">
+                                <span class="stats-number">98%</span>
+                                <p class="stats-label">Satisfação dos Pacientes</p>
+                            </div>
+
+                            <div class="stats-card">
+                                <span class="stats-number">10+</span>
+                                <p class="stats-label">Especialização e Tratamentos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="main-testimonial" id="testimonial">
+
+            <div class="main-testimonial-content">
+
+                <header class="testimonial-header">
+                    <h2>Veja o que nossos clientes dizem</h2>
+                </header>
+
+                <div class="main-testimonial-grid">
+
+                    <div class="arrow">
+                        <img src="assets/icons/left-arrow.svg" alt="left-arrow" title="left-arrow" class="left-arrow"
+                            id="left-arrow">
+                    </div>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="assets/icons/person.svg"></div>
+                            <div class="author-detail">
+                                <div class="author-name">Ana Paula Ferreira</div>
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                            </div>
+                        </div>
+
+                        <p class="service-detail">Implante Dentário</p>
+                        <div class="testimonial-text">
+                            <p>Tinha muito medo de dentista, mas a equipe foi incrível do começo ao fim. Explicaram cada
+                                etapa do implante com paciência, e o resultado superou todas as minhas expectativas.
+                                Hoje
+                                sorrio sem medo e com muito mais confiança. Gratidão define!</p>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="assets/icons/person.svg"></div>
+                            <div class="author-detail">
+                                <div class="author-name">Marcos Oliveira</div>
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                            </div>
+                        </div>
+                        <p class="service-detail">Tratamento de Canal e Prótese</p>
+                        <div class="testimonial-text">
+                            <p>Cheguei na clínica com muita dor e fui atendido com urgência. O tratamento de canal foi
+                                indolor, algo que eu não imaginava ser possível. Depois fizeram minha prótese e ficou
+                                perfeita. Equipe competente e atenciosa. Virei paciente fiel!</p>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="assets/icons/person.svg"></div>
+                            <div class="author-detail">
+                                <div class="author-name">Camila Rodrigues</div>
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                                <img src="assets/icons/star-active.png" width="20px">
+                            </div>
+                        </div>
+                        <p class="service-detail">Harmonização Orofacial</p>
+                        <div class="testimonial-text">
+                            <p>Além de cuidar dos meus dentes, conheci os procedimentos de harmonização facial. A Dra.
+                                Paula tem mãos de fada! Fiz preenchimento labial e toxina botulínica de forma super
+                                natural.
+                                Me sinto rejuvenescida e o melhor: tudo em um só lugar, com profissionais que ganharam
+                                minha confiança.
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="arrow">
+                        <img src="assets/icons/right-arrow.svg" alt="right-arrow" title="right-arrow"
+                            class="right-arrow" id="right-arrow">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <article class="main-contact" id="contact">
+            <div class="main-contact-content">
+                <header class="contact-section-header">
+                    <h2>Agende sua consulta</h2>
+                    <p>Cuide do seu sorriso com quem é especialista</p>
+                </header>
+
+                <div class="contact-content-divider">
+                    <div class="contact-content-left">
+                        <form id="appointment-form" class="appointment-form">
+                            <h3>Preencha o formulário</h3>
+                            <div class="input-group">
+                                <label for="name">Seu nome</label>
+                                <input type="text" id="name" name="name" placeholder="Nome completo" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="contact">Telefone / WhatsApp</label>
+                                <input type="tel" id="contact" name="contact" placeholder="(11) 99999-9999" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Conte-nos como podemos ajudar"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Enviar mensagem</button>
+                        </form>
+
+                    </div>
+
+                    <div class="contact-content-right">
+
+                        <div class="contact-card">
+
+                            <div class="content-card-icon">
+                                <img src="assets/icons/phone.svg">
+                            </div>
+
+                            <div class="contact-card-content">
+                                <h3>Telefone</h3>
+                                <p>(11) 99999-9999</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+
+                            <div class="content-card-icon">
+                                <img src="assets/icons/email.svg">
+                            </div>
+
+                            <div class="contact-card-content">
+                                <h3>Email</h3>
+                                <p>contato@dentalhealth.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+
+                            <div class="content-card-icon">
+                                <img src="assets/icons/location.svg">
+                            </div>
+
+                            <div class="contact-card-content">
+                                <h3>Endereço</h3>
+                                <p>Avenida Dr.Sorriso, 847 - Sala 302</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+
+                            <div class="content-card-icon">
+                                <img src="assets/icons/clock.svg">
+                            </div>
+
+                            <div class="contact-card-content">
+                                <h3>Horário</h3>
+                                <p>Seg - Sex: 8h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="main-footer">
+            <div class="main-footer-content">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <h2 class="logo">Dental Health</h2>
+
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg"></a>
+
+                            <a href="#" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg"></a>
+
+                            <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg"></a>
+
+                            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-content-grid">
+                        <div class="footer-content-column">
+                            <h3>Links Rápidos</h3>
+
+                            <ul>
+                                <li><a href="#">Nossos serviços</a></li>
+                                <li><a href="#">Sobre nós</a></li>
+                                <li><a href="#">Contato</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-content-column">
+                            <h3>Serviços</h3>
+
+                            <ul>
+                                <li><a href="#">Estética Dental</a></li>
+                                <li><a href="#">Implantes e Reabilitação</a></li>
+                                <li><a href="#">Prevenção e Limpeza</a></li>
+                                <li><a href="#">Endodontia (Canal)</a></li>
+                                <li><a href="#">Periodontia</a></li>
+                                <li><a href="#">Ortodontia</a></li>
+                                <li><a href="#">Cirurgias</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-content-column">
+                            <h3>Contato</h3>
+
+                            <ul>
+                                <li><a href="#">(11) 99999-9999</a></li>
+                                <li><a href="#">contato@dentalhealth.com</a></li>
+                                <li><a href="#">Avenida Dr. Sorriso, 847 - Sala 302</a></li>
+                                <li><a href="#">Horário: Seg - Sex 8h às 18h</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2025 Dental Health. Todos os direitos reservados. |
+                        <a href="#">Política de Privacidade</a> |
+                        <a href="#">Termos de Uso</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
