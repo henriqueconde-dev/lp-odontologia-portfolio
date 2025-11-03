@@ -1,0 +1,237 @@
+.modal-box {
+    width: 90%;
+    max-width: 720px;
+    max-height: 90vh;
+    padding: 20px;
+    background: #ffffff;
+    border: none;
+    /* o elemento <dialog> pode ter borda padrão */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+
+    /* centralização simples e confiável */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+.modal-box::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-box[open]::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+}
+
+.modal-box .x-close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    margin-bottom: 30px;
+}
+
+.modal-header .modal-title {
+    background-image: linear-gradient(to right, var(--azul-primario), var(--verde-primario));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: 0.2s ease;
+    font-weight: 800;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.modal-header .modal-title-description {
+    margin-bottom: 30px;
+    color: var(--cinza-fonte-secundaria);
+}
+
+.modal-about {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cinza-margin)
+}
+
+.modal-subtitle {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--preto-fonte-primaria);
+}
+
+.modal-about-content {
+    line-height: 25px;
+    color: var(--cinza-fonte-secundaria)
+}
+
+.modal-benefit {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cinza-margin);
+}
+
+.modal-benefit .modal-benefit-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.modal-benefit .modal-benefit-header img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.modal-benefit .modal-benefit-header p {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--preto-fonte-primaria);
+    margin: 0;
+}
+
+.modal-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--cinza-fonte-secundaria);
+}
+
+.modal-benefits-list li img {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.modal-proceeding {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--cinza-margin)
+}
+
+.modal-proceeding .modal-subtitle {
+    flex-basis: 100%;
+}
+
+.modal-proceeding-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: 999px;
+    /* pílula */
+    border: 1px solid var(--azul-primario);
+    background-color: var(--azul-bg);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.modal-proceeding-badge-text {
+    font-size: 0.875em;
+    color: var(--azul-primario);
+}
+
+.modal-duration {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--cinza-margin);
+}
+
+.modal-duration p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-duration img {
+    width: 20px;
+    margin-right: 2px;
+}
+
+.modal-duration span {
+    font-weight: 600;
+    color: var(--preto-fonte-primaria)
+}
+
+.modal-duration p {
+    color: var(--cinza-fonte-secundaria)
+}
+
+.modal-ourdifferences {
+    margin-bottom: 30px;
+}
+
+.modal-ourdifferences-list-item {
+    display: flex;
+    position: relative;
+    padding-left: 15px;
+    color: var(--cinza-fonte-secundaria)
+}
+
+.modal-ourdifferences-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--azul-primario);
+    z-index: 0;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.close-modal {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 0.875em;
+    font-weight: 600;
+    border: 1px solid var(--cinza-fonte-secundaria);
+    color: var(--preto-fonte-primaria);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-book-appointment {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 15px;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: var(--branco-bg);
+    background-image: linear-gradient(90deg, var(--azul-primario), var(--verde-primario));
+    background-size: 200%;
+    transition: background-position 0.4s ease, transform 0.2s ease;
+    cursor: pointer;
+}

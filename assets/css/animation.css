@@ -38,13 +38,13 @@
 
 /*BOTÕES*/
 
-.contact-btn:hover {
+.contact-btn:hover, .btn-book-appointment:hover {
   background-position: right center;
   transform: scale(1.05);
 }
 
 
-.services-btn:hover {
+.services-btn:hover, .close-modal:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(0, 180, 140, 0.5),
     0 0 25px rgba(0, 90, 255, 0.3);
