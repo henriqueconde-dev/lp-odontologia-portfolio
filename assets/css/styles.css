@@ -356,70 +356,95 @@
 .main-testimonial-content {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 60px 20px;
+    position: relative;
 }
 
 .main-testimonial .testimonial-header {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: var(--preto-fonte-primaria);
+    text-align: center;
 }
 
 .main-testimonial .main-testimonial-grid {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    /* cards têm mesma altura */
-    gap: 24px;
-    /* espaçamento ideal entre cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
     position: relative;
-    /* necessário para posicionar arrows */
-    padding: 0 80px;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px; /* Aumentado para dar mais espaço às setas */
 }
 
-.main-testimonial .main-testimonial-grid .testimonial-card {
-    flex: 0 0 320px;
-    /* largura fixa por card (ajuste se quiser) */
-    max-width: 320px;
-    height: 420px;
-    /* altura fixa para todos (ajuste conforme design) */
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: var(--branco-bg);
-}
-
-.main-testimonial .main-testimonial-grid>.arrow {
+/* ----- SETAS ----- */
+.main-testimonial .main-testimonial-grid > .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.main-testimonial .main-testimonial-grid>.arrow:first-child {
-    left: 8px;
+.main-testimonial .main-testimonial-grid > .arrow:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.1);
 }
 
-.main-testimonial .main-testimonial-grid>.arrow:last-child {
-    right: 8px;
+.main-testimonial .main-testimonial-grid > .arrow:first-child {
+    left: 16px; /* Mais distante da borda */
+}
+
+.main-testimonial .main-testimonial-grid > .arrow:last-child {
+    right: 16px; /* Mais distante da borda */
 }
 
 .main-testimonial .main-testimonial-grid .arrow img {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     display: block;
 }
 
+/* ----- CARD ----- */
+.main-testimonial .testimonial-card {
+    width: 100%;
+    max-width: 360px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: var(--branco-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-testimonial .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ----- CONTEÚDO DO CARD ----- */
 .testimonial-card .testimonial-author {
     display: flex;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .testimonial-card .testimonial-author .author-avatar {
@@ -431,7 +456,6 @@
     flex: 0 0 50px;
     border-radius: 50%;
     overflow: hidden;
-    box-sizing: border-box;
     background-color: var(--preto-fonte-primaria);
 }
 
@@ -440,29 +464,29 @@
     height: 65%;
     object-fit: contain;
     display: block;
-    margin: 0 auto;
 }
 
 .testimonial-card .testimonial-author .author-detail {
-    padding-left: 10px;
+    padding-left: 12px;
 }
 
 .testimonial-card .testimonial-author .author-detail .author-name {
+    font-weight: 700;
     margin-bottom: 2px;
-    font-weight: 800;
     color: var(--preto-fonte-primaria);
 }
 
 .testimonial-card .service-detail {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 600;
     color: var(--verde-primario);
 }
 
 .testimonial-card .testimonial-text {
     flex: 1 1 auto;
-    overflow: auto;
     color: var(--cinza-fonte-secundaria);
+    line-height: 1.5;
+    overflow: hidden;
 }
 
 /*CONTACT*/
@@ -666,6 +690,12 @@
     padding-bottom: 15px;
     border-bottom: 2px solid var(--verde-primario);
     color: var(--branco-bg);
+}
+
+.footer-content-column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-content-column ul li a {

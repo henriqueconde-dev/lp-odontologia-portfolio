@@ -4,16 +4,24 @@ export function initTestimonialCarousel() {
     const leftArrow = document.querySelector('.arrow:first-child');
     const rightArrow = document.querySelector('.arrow:last-child');
 
-    // Configurações do carrossel
     const totalCards = cards.length;
-    const cardsToShow = 3;
+    let cardsToShow = getCardsToShow(); // define de acordo com a tela
     let currentPosition = 0;
 
-    // Configuração inicial
+    // 🔹 Função que ajusta quantos cards mostrar conforme a largura da janela
+    function getCardsToShow() {
+        const width = window.innerWidth;
+        if (width <= 768) return 1;      // Celulares
+        if (width <= 1100) return 2;     // Tablets
+        return 3;                        // Desktop
+    }
+
+    // 🔹 Configuração inicial e ao redimensionar
     function setupCarousel() {
-        // Mostra apenas os 3 primeiros cards
+        cardsToShow = getCardsToShow();
+
         cards.forEach((card, index) => {
-            if (index < cardsToShow) {
+            if (index >= currentPosition && index < currentPosition + cardsToShow) {
                 card.style.display = 'flex';
                 card.style.opacity = '1';
             } else {
@@ -23,65 +31,60 @@ export function initTestimonialCarousel() {
             card.style.transition = 'opacity 0.3s ease-in-out';
         });
 
-        // Atualiza estado inicial das setas
         updateArrowStates();
     }
 
-    // Função para atualizar visibilidade das setas
+    // 🔹 Atualiza visibilidade das setas
     function updateArrowStates() {
         leftArrow.style.opacity = currentPosition === 0 ? '0.3' : '1';
         leftArrow.style.cursor = currentPosition === 0 ? 'default' : 'pointer';
-        
+
         const isLastSet = currentPosition + cardsToShow >= totalCards;
         rightArrow.style.opacity = isLastSet ? '0.3' : '1';
         rightArrow.style.cursor = isLastSet ? 'default' : 'pointer';
     }
 
-    // Função para mover o carrossel
+    // 🔹 Movimenta o carrossel
     function moveCarousel(direction) {
-        const nextPosition = direction === 'next' 
-            ? currentPosition + cardsToShow 
-            : currentPosition - cardsToShow;
+        const nextPosition =
+            direction === 'next'
+                ? currentPosition + cardsToShow
+                : currentPosition - cardsToShow;
 
-        // Verifica se o movimento é válido
         if (nextPosition < 0 || nextPosition >= totalCards) return;
 
-        // Fade out cards atuais
         cards.forEach((card) => {
             card.style.opacity = '0';
-            setTimeout(() => card.style.display = 'none', 300);
+            setTimeout(() => (card.style.display = 'none'), 300);
         });
 
-        // Atualiza posição
         currentPosition = nextPosition;
 
-        // Fade in novos cards após pequeno delay
         setTimeout(() => {
             cards.forEach((card, index) => {
                 if (index >= currentPosition && index < currentPosition + cardsToShow) {
                     card.style.display = 'flex';
-                    setTimeout(() => card.style.opacity = '1', 50);
+                    setTimeout(() => (card.style.opacity = '1'), 50);
                 }
             });
-
-            // Atualiza estado das setas
             updateArrowStates();
         }, 300);
     }
 
-    // Event Listeners
+    // 🔹 Listeners das setas
     leftArrow.addEventListener('click', () => {
-        if (currentPosition > 0) {
-            moveCarousel('prev');
-        }
+        if (currentPosition > 0) moveCarousel('prev');
     });
 
     rightArrow.addEventListener('click', () => {
-        if (currentPosition + cardsToShow < totalCards) {
-            moveCarousel('next');
-        }
+        if (currentPosition + cardsToShow < totalCards) moveCarousel('next');
     });
 
-    // Inicializa o carrossel
+    // 🔹 Atualiza o carrossel ao redimensionar a janela
+    window.addEventListener('resize', () => {
+        setupCarousel();
+    });
+
+    // Inicializa
     setupCarousel();
 }

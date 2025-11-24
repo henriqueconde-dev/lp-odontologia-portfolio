@@ -12,8 +12,6 @@
   }
 }
 
-/*MENU*/
-
 .menu-list-item::after {
   content: '';
   position: absolute;
@@ -36,8 +34,6 @@
   color: var(--azul-primario);
 }
 
-/*BOTÕES*/
-
 .contact-btn:hover, .btn-book-appointment:hover {
   background-position: right center;
   transform: scale(1.05);
@@ -50,15 +46,48 @@
     0 0 25px rgba(0, 90, 255, 0.3);
 }
 
-/*CTA IMG*/
-
 .main-cta-content-right img:hover {
   transform: scale(1.02);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-/*SERVICES CARDS*/
+.icon-footer,
+.social-links a img {
+  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.icon-footer:hover,
+.social-links a img:hover {
+  transform: translateY(-6px) scale(1.12);
+  filter: drop-shadow(0 8px 14px rgba(16,185,129,0.10));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.social-links a img:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.social-links a img:focus {
+  outline: 3px solid rgba(6,182,212,0.14);
+  outline-offset: 4px;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.social-links a img.animate-float {
+  animation: floatY 6s ease-in-out infinite;
+}
 
 .services-card:hover {
   opacity: 1;
+}
+
+.footer-content-column ul li a:hover {
+  font-weight: 600;
+  color: var(--verde-primario);
 }

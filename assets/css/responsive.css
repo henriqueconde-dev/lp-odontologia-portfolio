@@ -1,0 +1,92 @@
+@media (max-width: 1200px) {
+    .main-testimonial .main-testimonial-grid {
+        padding: 0 70px;
+    }
+    
+    .main-testimonial .main-testimonial-grid > .arrow:first-child {
+        left: 12px;
+    }
+
+    .main-testimonial .main-testimonial-grid > .arrow:last-child {
+        right: 12px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-testimonial .main-testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 60px;
+    }
+
+    .main-testimonial .main-testimonial-grid > .arrow:first-child {
+        left: 8px;
+    }
+
+    .main-testimonial .main-testimonial-grid > .arrow:last-child {
+        right: 8px;
+    }
+}
+
+/* Tablet e abaixo */
+@media (max-width: 768px) {
+    .main-testimonial .main-testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .main-testimonial .testimonial-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+    
+    /* Esconde as setas em mobile */
+    .main-testimonial .main-testimonial-grid > .arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-list {
+    gap: 40px !important;
+}
+}
+
+/* Notebook médio */
+@media (max-width: 1280px) {
+    .clinic-name {
+        margin-left: 20px;
+    }
+
+    .contact-btn {
+        margin-right: 20px;
+    }
+
+    .main-cta-content-left {
+        margin-left: 20px;
+    }
+
+    .main-cta-content-right {
+        margin-right: 20px;
+    }
+
+    .services-cards-grid {
+        padding: 0 20px;
+    }
+
+    .main-aboutus {
+        padding: 0 20px;
+    }
+
+    .main-contact {
+        padding: 0 20px;
+    }
+
+    .main-footer {
+        padding: 0 20px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1440px) {
+}
